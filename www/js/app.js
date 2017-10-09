@@ -25,49 +25,59 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  //Cachorros lista
+  .state('app.cachorros', {
+    url: '/cachorros',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/listaanimais.html',
+        controller: 'CachorrosCtrl'
+      }
+    }
+  })
+  
+  
+  //Cachorro Detalhes
+    .state('app.cachorro', {
+    url: '/cachorro/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/animal.html',
+        controller: 'CachorroCtrl'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  //Gatos
+  .state('app.gatos', {
+      url: '/gatos',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/listaanimais.html',
+          controller: 'GatosCtrl'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+  
+  //Perfil
+  .state('app.perfil', {
+      url: '/perfil',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/perfil.html',
+          controller: 'PerfilCtrl'
         }
       }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+    });
+  
+  
+  // .otherwise, vai redirecionar para outra página se algo de errado acontecer
+  $urlRouterProvider.otherwise('/app/gatos');
 });

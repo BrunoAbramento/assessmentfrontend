@@ -41,16 +41,50 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+
+.controller('CachorroCtrl', function($scope){
+  $scope.animais =[{
+    "id":"1",
+    "nome":"Doge",
+    "descricao":"Descrição genérica",
+    "contato":"12345678",
+    "imagem":"http://i0.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg"
+  }];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('CachorrosCtrl', function($scope){
+  $scope.animais = [{
+    "id":"1",
+    "nome":"Doge",
+    "descricao":"Descrição genérica",
+    "contato":"12345678",
+    "imagem":"http://i0.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg"
+  },
+  {
+    "id":"2",
+    "nome":"Doggo",
+    "descricao":"Descrição genérica",
+    "contato":"12345678",
+    "imagem":"https://www.shitpostbot.com/sourceimage/happy-doggo-57b1df2fb27db"
+  },
+  {
+    "id":"3",
+    "nome":"MoonMoon",
+    "descricao":"Descrição genérica",
+    "contato":"12345678",
+    "imagem":"https://i.imgflip.com/11fr5c.jpg"
+  },
+  {
+    "id":"4",
+    "nome":"Corgo",
+    "descricao":"Descrição genérica",
+    "contato":"12345678",
+    "imagem":"http://i.imgur.com/V43tnAC.png"
+  }];
+})
+.controller('GatosCtrl', function($scope){
+  $scope.animais = [];
+})
+.controller('PerfilCtrl', function($scope){
+  
 });
