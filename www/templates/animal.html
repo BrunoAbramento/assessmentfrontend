@@ -1,15 +1,12 @@
-<ion-view view-title="Animal">
+<ion-view view-title="Lista Animais">
   <ion-content>
     <h1>{{titulo}}</h1>
-    
     <div class="list">
-
-    <a class="item item-thumbnail-left" href="#/app/cachorro/{{animal.id}}">
-      <img {{{animal.imagem}}>
-      <h2>{{animal.nome}}</h2>
-      <p>{{animal.contato}}</p>
-    </a>
-</div>
-    
+        <a class="item item-thumbnail-left" href="#/app/cachorro/{{animais.id}}">
+          <img src="{{animais.imagem}}">
+          <h2>{{animais.nome}}</h2>
+          <p>{{animais.descricao}}</p>
+        </a>
+    </div>
   </ion-content>
 </ion-view>
